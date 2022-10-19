@@ -1,0 +1,66 @@
+<% include ./partials/navBar %>
+<% include ./partials/messages %>
+<div class="sign-up-page emp">
+   <p>Registration Form</p>
+   <div class="inner-sign-up-page">
+       <form action="/emp/signup" method="post">
+           <input type="text" id="date" name="date_of_creation" style="display: none;" value="">
+           <p id="form-title">Login Detail</p>
+           <div class="row1">
+               <input type="text" name="first_name" id="First _ame" placeholder="First Name" class="sign" value="<%= typeof first_name != 'undefined' ? first_name : '' %>" required>
+               <input type="text" name="last_name" id="last_name" placeholder="Last Name" class="sign" value="<%= typeof last_name != 'undefined' ? last_name : '' %>" required>
+           </div>
+           <div class="row2">
+               <input type="password" name="password" id="password" placeholder="Password" class="sign" required>
+               <input type="password" name="C_password" id="C_password" placeholder="Confim Password" class="sign" required>
+           </div>
+           <div class="row3">
+               <input type="email" name="email" id="email" placeholder="Email" class="sign email" value="<%= typeof email != 'undefined' ? email : '' %>" required>
+               <input type="number" name="phone" id="phone" placeholder="Phone Number" class="sign email" value="<%= typeof phone != 'undefined' ? phone : '' %>" required>
+           </div>
+           <!-- address -->
+           <p id="form-title">Address</p>
+           <div class="row3">
+                <input type="text" name="address" id="address" placeholder="Home Address" class="sign" value="<%= typeof address != 'undefined' ? address : '' %>" required>
+            </div>
+            <div class="row3">
+                <input type="number" name="pin_code" id="pin" placeholder="Pin Code" class="sign" value="<%= typeof pin_code != 'undefined' ? pin_code : '' %>" required>
+                <input type="text" name="state" placeholder="State Name" class="sign" value="<%= typeof state != 'undefined' ? state : '' %>" required>
+            </div>
+            <!-- education -->
+            <p id="form-title">Education</p>
+            <div class="row3">
+                <input type="text" name="education" id="education" class="sign" placeholder="Higher Education" value="<%= typeof education != 'undefined' ? education : '' %>" required>
+                <input type="number" name="when" id="when" placeholder="Year" value="<%= typeof when != 'undefined' ? when : '' %>" required class="sign">
+            </div>
+            <div class="row3">
+                <input type="text" name="specialist" id="specialist" placeholder="Specialist in ..." value="<%= typeof specialist != 'undefined' ? specialist : '' %>" required class="sign">
+            </div>
+           <button type="submit" id="signup-btn">Register</button>
+       </form>
+   </div>
+</div>
+<% include ./partials/footer %>
+
+<script>
+   function date(){
+       const monthNames = ["January", "February", "March", "April", "May", "June",
+       "July", "August", "September", "October", "November", "December"
+       ];
+       var d = new Date();
+       let date = d.getDate();
+       let month = monthNames[d.getMonth()];
+       let year = d.getFullYear();
+       result = date+'-'+month+'-'+year;
+       document.getElementById('date').value = result;
+   }
+   date();
+</script>
+
+
+<style>
+    .emp{
+        background-image: linear-gradient(40deg,#b75454,#00BCD4) !important;
+        height: 136vh !important;
+    }
+</style>

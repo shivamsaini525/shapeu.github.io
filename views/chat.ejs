@@ -1,0 +1,139 @@
+<% include ./partials/Dash_navBar %>
+<% include ./partials/messages %>
+
+<div class="dash-wraper">
+<div class="side-nav">
+    <ul id="ul">
+        <a href="/dashboard"><li id="li"><i class="fas fa-home"></i> Home</li></a>
+        <a href="/user/diet-plan"><li id="li"><i class="fas fa-utensils"></i> Diet Plan</li></a>
+        <!-- <a href="#"><li id="li"><i class="fas fa-chart-pie"></i> Nutration Value</li></a> -->
+        <a href="/user/contact-chat42GeT"><li id="li" class="focus"><i class="fas fa-comment-dots"></i> Chat</li></a>
+        <!-- <a href="#"><li id="li"><i class="fas fa-running"></i> PT</li></a> -->
+        <a href="#"><li id="li"><i class="fas fa-burn"></i> Burn Caloris</li></a> 
+        <a href="#"><li id="li"><i class="fas fa-cookie-bite"></i>  CheatMeal</li></a> 
+        <a href="#"><li id="li"><i class="fas fa-journal-whills"></i> Dark Knowlege</li></a> 
+        <a href="/user/user-report"><li id="li"><i class="far fa-clipboard"></i> Report</li></a> 
+        <a href="/blogs"><li id="li"><i class="fas fa-blog"></i> Blogs</li></a>
+        <a href="/settings"><li id="li"><i class="fas fa-wrench"></i> Setting</li></a>
+        <a href="/logout"><li id="li"><i class="fas fa-power-off"></i> Logout</li></a> 
+    </ul>
+<!-- <div class="inner-image"></div> -->
+</div>
+<div class="main-container">
+    <h3 id="heading-center">It can Take Sometime for Reply Please Wait....</h3>
+   <div class="inner-chat">
+       <!-- for sender -->
+       <% for(var i=0; i < msg.length; i++) {%>
+        <p style="margin-left: 10px;" id="msg-sender"><%= msg[i].message %> 
+         <i style="font-size: .8rem;color: rgb(145, 143, 143);">---------<%= msg[i].when%></i>
+         <br><span>From <%= msg[i].from%></span></p>
+        <% } %>
+        <% for(var i=0; i < sender.length; i++) {%>
+            <p style="margin-left: 10px; margin-top: 5px;" id="msg"><%= sender[i].message %> 
+             <i style="font-size: .8rem;color: rgb(145, 143, 143);">---------<%= sender[i].when%></i>
+             <br><span>From <%= sender[i].from%></span></p>
+            <% } %>
+        <form action="/user/chat" method="post" id="type">
+            <input type="text" name="message" id="message" placeholder="Message..." value="<%= typeof message != 'undefined' ? message : '' %>">
+            <button type="submit" id="btn-send">Send</button>
+        </form>
+   </div>
+</div>
+</div>
+</div>
+
+
+<style>
+    #msg-sender{
+    padding: 20px 24px;
+    background: aliceblue;
+    width: 600px;
+    border: none;
+    border-left: 10px solid #c42bf3;
+    }
+    span{
+        font-size: .98rem;
+        font-weight: 100;
+        font-family: monospace;
+    }
+    #type{
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+    }
+    #msg{
+    padding: 20px 24px;
+    background: aliceblue;
+    width: 600px;
+    border: none;
+    border-left: 10px solid #00bcd4;
+    }
+    button{
+        position: absolute;
+        padding: 16px 50px;
+        border: none;
+        background:#000;
+        color : #fff;
+        cursor: pointer;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+    /* .inner-chat{
+        position: absolute;
+        bottom: 25%;
+        height: 30px;
+        width: 27.5%;
+    } */
+    .inner-chat {
+        height: 60vh;
+        overflow-y: scroll;
+        padding-bottom: 100px;
+    }
+    .inner-chat input{
+      background-color: #fff;
+      border: 1px solid #000;
+      margin-left: 10px;
+      width: 67%;
+      height: 50px;
+      border-radius: 0px !important;
+        
+    }
+    .alert{
+        left: 19% !important;
+        border-left: 16px solid #e91E63;
+        background: #1b4b63;
+    }
+    .main-container{
+        height: auto;
+        width: 80%;
+        background-color: #eee;
+    }
+  
+    #ul{
+    list-style: none;
+    margin-top: 50px;
+    z-index: 9999999;
+    display: block;
+    width: 100%;
+    margin-left: 20px;
+}
+#ul a{
+    text-decoration: none;
+}
+#ul #li{
+    color: aliceblue;
+    margin-top: 3px;
+    padding: 16px 9px;
+    margin-left: -18px;
+    width: 100%;
+    transition: .2s ease-in-out;
+}
+#ul #li:hover{
+    margin-left: -30px;
+    width: 96%;
+    background-color: #1391ff;
+    border: none;
+    border-left: 10px solid #fff;
+    transform: translateX(10px);
+}
+</style>

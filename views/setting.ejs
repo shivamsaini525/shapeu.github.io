@@ -1,0 +1,59 @@
+<% include ./partials/Dash_navBar %>
+
+
+<div class="account">
+    <h3 id="heading-center">Account Setting of <%= user.first_name%> <%= user.last_name%></h3>
+    <div class="p-info">
+        <ul>
+            <li>If You Are Not Satisfy with our Services.</li>
+            <li>If You Have Any Complain Regarding Anything <a href="/contact">Contact to us</a></li>
+            <li>You Can Temporialy Disable Your Account.But You Can Not Permanantly Delete Your Account.Because of 1 week Trail Policy.</li>
+            <li>We Hope You Came Back Soon.	♥	</li>
+        </ul>
+        <a href="/disable"><button id="button-delete">Disable Account</button></a>
+    </div>
+</div>
+
+
+
+<style>
+    a{
+        text-decoration: none;
+    }
+    #button-delete{
+        padding: 10px 50px;
+        background-color: #000;
+        color: #fff;
+        display: block;
+        margin: 40px auto;
+        border: none;
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .p-info{
+        height: 30vh;
+        width: 90%;
+        background-color: rgb(235, 235, 235);
+        display: block;
+        margin: 0 auto;
+        border-radius:10px;
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+        padding-top: 40px;
+        color: #000;
+    }
+    ul{
+        margin-left: 50px;
+    }
+    #heading-center{
+        color: #000;
+        width: 92%;
+    }
+    .account{
+
+        height: 50vh;
+        width: 100%;
+        background-image: linear-gradient(60deg,rgb(131, 136, 182),rgb(100, 127, 158));
+        color: #fff;
+    }
+</style>

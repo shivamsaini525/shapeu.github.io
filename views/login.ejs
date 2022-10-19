@@ -1,0 +1,116 @@
+<% include ./partials/navBar %>
+<div class="login-wraper">
+  <header>
+    <h1>Log in</h1>
+  </header>
+  <main>
+    <form action="/login" method="post">
+    <div class="email">
+      <label for="email">Email</label>
+      <input type="email" placeholder="name@mail.com" id="log_email" name="email" required>
+    </div>
+    <div class="password">
+      <label for="password">Password</label>
+      <input type="password" placeholder="*******" id="log_pass" name="password" required>
+    </div>
+    <div class="account">
+      <p>Don't Have an Account <a href="/user-signup">Create here</a></p>
+    </div>
+    <input type="text" id="week" style="display: none;" value="">
+    <button type="submit">Login</button>
+  </form>
+  </main>
+  <p>ShapeYou.in @2020</p>
+  <% include ./partials/messages %>
+</div>
+
+<script>
+  function week(){
+    var w = new Date()
+    let d = w.getDay();
+    document.getElementById('week').value = d;
+  }
+  week();
+</script>
+
+<style>
+  .login_form{
+    display: none;
+  }
+  .login-wraper{
+    background-image: linear-gradient();
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    background-image: linear-gradient(120deg,  #f7ad0b 0%, #f3741b 80%);
+    color: #fff;
+    height: 80vh;
+    padding: 50px;
+  }
+  header h1{
+    font-family: sans-serif;
+    font-size: 2.6rem;
+    font-weight: 100;
+    padding-bottom: 30px;
+    color: rgba(255, 255, 255, .8);
+    letter-spacing: -.05rem;
+  }
+  main{
+    border-top: 1px dotted  #b47c04;
+    border-bottom: 1px dotted #b47c04;
+    display: flex;
+    flex-direction: column;
+    padding: 100px 0px;
+  }
+  main label{
+    font-size: 1.2rem;
+  }
+  main input{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+  main label,button,input{
+    width: 30%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .account{
+    display: block;
+    margin-top: 334px;
+  }
+  .account p a{
+    text-decoration: none;
+    padding-right: 10px;
+    color: #000;
+  }
+  .account p a:hover{
+    text-decoration: underline;
+  }
+  main button{
+    margin-top: 30px;
+    padding: 10px 0px;
+    background-image: linear-gradient(50deg,#fc4a1a,#f7b733);
+    background-size: 300%;
+    border: none;
+    color: #fff;
+    font-size: 1.2rem;
+    border-radius: 2px;
+    letter-spacing: 5px;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+  main button:hover{
+    background-size: 100%;
+  }
+
+  @media screen and (max-width:600px){
+    main label, button, input{
+      width: 100%;
+    }
+    .account{
+    margin-top: 277px;
+    margin-left: -16px;
+    transform: translateX(-80px);
+    }
+  }
+</style>

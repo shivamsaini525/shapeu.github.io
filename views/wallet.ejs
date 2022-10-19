@@ -1,0 +1,44 @@
+<% include ./partials/Dash_navBar %>
+<% include ./partials/messages %>
+<div class="dash-wraper">
+<div class="side-nav">
+    <ul id="ul">
+        <a href="/emp/dashboard"><li id="li"><i class="fas fa-home"></i> Home</li></a>
+        <a href="/emp/requests"><li id="li"><i class="fas fa-notes-medical"></i> Client Request</li></a>
+        <a href="/emp/write-blog"><li id="li" ><i class="fas fa-pen"></i> Write Blogs</li></a>
+        <a href="/emp/chat"><li id="li"><i class="fas fa-comment-dots"></i> Chat</li></a>
+        <a href="/emp/salary"><li id="li" class="focus"><i class="fas fa-rupee-sign"></i> Wallet</li></a>
+        <a href="/emp/reports"><li id="li"><i class="far fa-clipboard"></i> Reports</li></a>
+        <a href="/emp/pre-client"><li id="li"><i class="fas fa-crown"></i> Clients</li></a>
+        <a href="/logout"><li id="li"><i class="fas fa-power-off"></i> Logout</li></a>
+    </ul>
+<!-- <div class="inner-image"></div> -->
+</div>
+<div class="main-container">
+    <div class="inner-main">
+        <h3 id="heading-center">Salary</h3>
+        <div class="sale">
+            <h3>Salary: <%= user.salary%> Rs</h3>
+            <h3 style="margin-left: 40px;">Total Client: <%= count%></h3>
+            <h3 style="margin-left: 40px;">Estimated Salary: <%= salary%> Rs</h3>
+        </div>
+        <div class="salary-info">
+            <h2 style="margin-bottom: 50px;">Salary Policy</h2>
+            <ul>
+                <li>Our Pakage is of 69 Rs so 10% of 69 Rs is You cut.</li>
+                <li>6.9 Rs per Customer You Entertaine. </li>
+                <li>You Can Pick 2 Customer in a Day. This Limit Can Be Upraise By Your Performance.</li>
+                <li>Your Salary Will Transfer to You Account Directly.<a href="#" style="color:#000">Update you Account Detail</a></li>
+                <li>Salary Given in the End of Month. if You Have any Query. <a href="/contact" style="color:#000">contact</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</div>
+
+<style>
+
+</style>
+
+
+

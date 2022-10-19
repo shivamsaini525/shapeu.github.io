@@ -1,0 +1,131 @@
+<% include ./partials/navBar %>
+
+<div class="plan-wraper">
+        <p>Pay For What You See Changing in your Shape</p>
+        <!-- <p id="price_q">
+            All Types of transformation are on same Price
+        </p> -->
+    <div class="inner-plans">
+        <div class="first-week">
+            <h1>Week 1</h1>
+            <p>Free</p>
+            <h2 id="q">Chat Support</h2>
+            <h2 id="q">Diet Plans</h2>
+            <h2 id="q">Excerise Plans</h2>
+            <h2 id="q">Prograsive Report</h2>
+            <h2 id="q">Supplement</h2>
+            <!-- <a href="/user-signup"><button>Select</button></a> -->
+        </div>
+        <div class="second-week">
+            <h1>Week 2 (next on)*</h1>
+            <p>49 ₹</p>
+            <h2 id="q">Chat Support</h2>
+            <h2 id="q">Chnage Diet Plans</h2>
+            <h2 id="q">Excerise Plans</h2>
+            <h2 id="q">Prograsive Report</h2>
+            <h2 id="q">Supplements</h2>
+            <h2 id="q">Plans According you Schedule</h2>
+            <!-- <a href="/user-signup"><button>Select</button></a> -->
+        </div>
+    </div>
+    <p id="plan_q"> All Types of transformation are on same Price</p>
+</div>
+
+<!-- footer -->
+<% include ./partials/footer %>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+    #plan_q{
+        position: absolute;
+        bottom: 0;
+        left: 34%;
+        font-size: 1.8rem;
+        padding-top: 0px !important;
+    }
+    .plan-wraper{
+        height: 130vh;
+        width: 100%;
+        background-image:linear-gradient(50deg,#155799,#159957);
+        background-size: 110%;
+        position: relative;
+        color: #fff;
+    }
+    h1{
+        text-align: center;
+        padding-top: 10px;
+        color: #000;
+    }
+    .first-week p{
+        margin-top: 5px;
+        text-align: center !important;
+        color: #155799;
+        font-size: 3rem !important;
+        font-weight: 900 !important;
+        font-family: "Teko", sans-serif !important;
+    }
+    .second-week p{
+        margin-top: 5px;
+        text-align: center !important;
+        color: #155799;
+        font-size: 3rem !important;
+        font-weight: 900 !important;
+        font-family: "Teko", sans-serif !important;
+    }
+    #q{
+        text-align: center;
+        color: rgb(54, 53, 53);
+        background-color: #fff;
+        margin-top: 10px;
+        padding-top: 5px;
+    }
+    .plan-wraper p{
+        text-align: center;
+        padding-top: 100px;
+        font-size: 4rem;
+        font-family: "Teko",sans-serif;
+        word-spacing: 4px;
+    }
+    .inner-plans{
+        height: 40vh;
+        width: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        display: flex;
+    }
+    .inner-plans p{
+        font-family: 'Rajdhani', sans-serif;
+        text-align: start;
+        padding-top: 0px;
+        font-size: 1.5rem;
+    }
+    .inner-plans .first-week{
+        height: 70vh;
+        width: 50%;
+        background-color: rgb(212, 211, 211);
+        margin-right: 10px;
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+        
+    }
+    .inner-plans .second-week{
+        height: 70vh;
+        width: 50%;
+        background-color: rgb(212, 211, 211);
+        margin-left: 10px;
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
+    a{
+        text-decoration: none;
+    }
+    button{
+        padding: 7px 50px;
+        display: block;
+        margin: 0 auto;
+        margin-top: 20px;
+        background-color:black;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+</style>

@@ -1,0 +1,130 @@
+<!-- hide -->
+<h4 id="date" style="display: none;"><%=user.date_of_creation%></h4>
+<% include ./partials/Dash_navBar %>
+<div class="cover"></div>
+<main>
+    <div class="profile">
+        <h3>Personal Detail</h3>
+        <hr>
+        <div class="row">
+           <p id="head">Name : <h4><%= user.first_name%> <%= user.last_name%></h4></p>
+           <p id="head">Phone Number: <h4><%= user.phone%></h4></p>
+        </div>
+        <div class="row">
+            <p id="head">Email : <h4><%= user.email %></h4></p>
+        </div>
+        <h3>Heath Card</h3>
+        <hr>
+        <div class="row" style="margin-left:0px">
+            <p id="head">Age: <h4><%= user.age%></h4></p>
+            <p id="head">Disease: <h4><%= user.disease%></h4></p>
+            <p id="head">Height: <h4><%= user.height%></h4></p>
+            <p id="head">Weight: <h4><%= user.weight%></h4></p>
+        </div>
+        <div class="row" style="margin-left:0px">
+            <p id="head">Job Type: <h4><%= user.job_type%></h4></p>
+            <p id="head">Occupation: <h4><%= user.job%></h4></p>
+            <!-- <p id="head">Weight: <h4><%= user.weight%></h4></p> -->
+        </div>
+        <h3>Goals</h3>
+        <hr>
+        <div class="row">
+            <p id="head">Goal: <h4><%= user.g_weight%></h4></p>
+            <p id="head">Goal Type: <h4><%= user.goal%></h4></p>
+        </div>
+        <h3>Plan</h3>
+        <hr>
+        <div class="row">
+            <p id="head">Plan : <h4><%=user.plan%></h4></p>
+            <p id="head">Program Type: <h4><%= user.goal%></h4></p>
+        </div>
+        <h3>Join Date</h3>
+        <hr>
+        <div class="row">
+            <p id="head">Join Date:<h4><%=user.date_of_creation%></h4></p>
+        </div>
+        <h3>Food Preference</h3>
+        <hr>
+        <div class="row">
+            <p id="head">Fruit: <h4><%= user.fruit%></h4></p>
+            <p id="head">Food: <h4><%= user.food%></h4></p>
+            <p id="head">Dislike Food: <h4><%= user.bad_food%></h4></p>
+        </div>
+       <a href="#"><button>Edit</button></a>
+    </div>
+</main>
+
+<style>
+    .cover{
+        height: 200px;
+        width: 100%;
+        background-image: url('https://images.pexels.com/photos/1040473/pexels-photo-1040473.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    main{
+        height: 70vh;
+        width: 100%;
+        background-image: linear-gradient(50deg,rgb(252, 186, 63),pink);
+    }
+    .profile{
+        height: 400px;
+        width: 700px;
+        background-color: rgb(255, 255, 255);
+        display: block;
+        margin: 0 auto;
+        transform: translateY(-40px);
+        border: none;
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+        border-radius: 3px;
+        position: relative;
+        padding: 40px;
+        overflow-x: scroll;
+    }
+    .row{
+        display: flex;
+        margin-top: 10px;
+        margin-left: 20px;
+    }
+    #head{
+        font-size: 1.4rem;
+        padding-left: 50px;
+    }
+    h4{
+        font-size: 1.4rem;
+    }
+    h3{
+        margin-top: 10px;
+    }
+    button{
+        padding: 7px 40px;
+        display: block;
+        margin: 0 auto;
+        margin-top: 30px;
+        background-color: #eee;
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+        color: #000;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    button:hover{
+        background-color: #000;
+        color: #fff;
+        box-shadow: 0 14px 28px rgba(0,0,0,0.33), 0 10px 10px rgba(12, 11, 11, 0.22);
+    }
+    a{
+        text-decoration: none;
+    }
+</style>
+
+
+<script>
+    var date =  document.getElementById('date');
+    var h4 = document.createElement("h4");
+    h4.innerHTML = date.toString();
+//    var newDate = (date+'').toString();
+//    console.log(newDate);
+//    document.getElementById('newDate').outerHTML = newDate
+</script>

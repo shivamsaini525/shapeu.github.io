@@ -1,0 +1,47 @@
+
+<% include ./partials/messages %>
+<form action="/admin-add" method="post">
+    <h1 id="head-title" style="color:#fff ;">
+        Admin Resgistraion
+    </h1>
+    <input type="text" id="date" name="date_of_creation" style="display: none;" value="">
+<div class="row3">
+    <input type="text" name="name" class="sign" placeholder="Name" value="<%= typeof name != 'undefined' ? name : '' %>" required>
+    <input type="text" name="email" class="sign" placeholder="Email" value="<%= typeof email != 'undefined' ? email : '' %>" required>
+</div>
+<div class="row3">
+    <input type="password" name="password" class="sign" placeholder="password" value="<%= typeof password != 'undefined' ? password : '' %>" required>
+    <input type="password" name="C_password" class="sign" placeholder="Confirm password" required>
+</div>
+<button type="submit" id="signup-btn">Create</button>
+</form>
+
+
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        background-color: rgb(48, 48, 48);
+    }
+    form{
+        margin-top: 10%;
+        background-color: rgb(48, 48, 48);
+        height: 400px !important;
+    }
+</style>
+
+
+<script>
+    function date(){
+        const monthNames = ["January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
+        ];
+        var d = new Date();
+        let date = d.getDate();
+        let month = monthNames[d.getMonth()];
+        let year = d.getFullYear();
+        result = date+'-'+month+'-'+year;
+        document.getElementById('date').value = result;
+    }
+    date();
+ </script>

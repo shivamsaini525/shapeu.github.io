@@ -1,0 +1,100 @@
+<% include ./partials/navBar %>
+
+<!-- blogs -->
+<div class="blog-wraper">
+    <div class="side-menu">
+        <!-- content menu -->
+        <p id="blog-heading">ShapeYou's Blogs</p>
+        <p>Shape You</p>
+    </div>
+    <div class="main-blog">
+
+        <div class="blog">
+            <div id="blog-heading-blog">Heading</div>
+            <img src="https://images.pexels.com/photos/807598/pexels-photo-807598.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="images">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias nam cumque est accusantium ab aliquam dolore nisi similique natus. Corrupti necessitatibus, beatae nostrum itaque magnam nulla possimus odio eum. Maxime!
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint repellat fugiat hic qui, commodi iste? Aperiam vitae itaque porro eius, expedita officiis maxime neque velit dolores commodi quidem, sit distinctio?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi quas iste veniam reiciendis veritatis facere provident unde, error maiores suscipit perspiciatis voluptas, placeat est quisquam quam dignissimos? Ipsum, est saepe.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione officia magni nesciunt reiciendis nemo fuga dignissimos consequatur saepe. Laboriosam, impedit doloribus? Beatae reprehenderit fugit possimus animi iure a soluta mollitia.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi voluptatibus maiores nemo sequi expedita, harum quam, sed rem quidem consequatur ad, illum vero id natus commodi soluta nulla molestias velit.
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam cumque minima aspernatur tenetur minus officiis odit quas eius veritatis, laborum commodi molestiae tempore, sit magni cupiditate at possimus, quam expedita.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis laboriosam veniam eaque! Neque placeat maiores rem exercitationem eius alias explicabo aut consequatur aliquam error. Ullam facilis obcaecati dolorum distinctio illum.
+            </p>
+            <div class="publish">
+                <p>Publish on <u><b>10-July-2020</b></u></p>
+            </div>
+        </div> 
+
+    </div>
+</div>
+
+<!-- fotoer -->
+<% include ./partials/footer%>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+    .blog-wraper{
+        height: auto;
+        width: 100%;
+        /* background-color: #000; */
+        display: flex
+    }
+    .side-menu{
+        height: 100vh;
+        width: 30%;
+        background-color: aliceblue;
+        position: relative;
+    }
+    .side-menu p{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-size: 4rem;
+        font-family: "Abril Fatface", cursive;
+        letter-spacing: 4px;
+        font-weight: 900;
+        background: url(https://images.pexels.com/photos/2441454/pexels-photo-2441454.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500) no-repeat;
+        background-position: center;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 0 14px 28px rgba(0,0,0,0.1), 0 10px 10px rgba(162, 201, 216, 0.22);
+    }
+    #blog-heading{
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-size: 1.8rem;
+        width: 289px;
+    }
+    .main-blog{
+        height: auto;
+        width: 70%;
+        margin: 20px;
+        /* background-color: rgb(27, 111, 185); */
+    }
+    .blog img{
+        height: 500px;
+        width: 60%;
+        display: block;
+        margin: 20px auto;
+    }
+    .blog #blog-heading-blog{
+        font-size: 1.8rem;
+        padding: 20px 10px;
+    }
+    .blog p{
+        font-size: 1.4rem;
+        padding-top: 20px;
+        word-spacing: 3px;
+        font-family: sans-serif;
+        color: rgb(109, 107, 107);
+        font-weight: 100;
+    }
+    .blog .publish p{
+        padding: 20px 0px;
+        font-size: 1rem;
+        border-bottom: 1px solid #eee;
+    }
+</style>

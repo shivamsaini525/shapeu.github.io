@@ -1,0 +1,104 @@
+ <% include ./partials/navBar %>
+ <% include ./partials/messages %>
+<div class="sign-up-page">
+    <p>Sign up</p>
+    <div class="inner-sign-up-page">
+        <form action="/user-signup" method="post" enctype="multipart/form-data">
+            <!-- <input type="text" id="date" name="Date_of_creation" style="display: none;" value="">
+            <input type="text" id="week" name="membership" style="display: none;" value=""> -->
+            <p id="form-title">Login Detail</p>
+            <div class="row1">
+                <input type="text" name="first_name" id="First _ame" placeholder="First Name" class="sign" value="<%= typeof first_name != 'undefined' ? first_name : '' %>" required>
+                <input type="text" name="last_name" id="last_name" placeholder="Last Name" class="sign" value="<%= typeof last_name != 'undefined' ? last_name : '' %>" required>
+            </div>
+            <div class="row2">
+                <input type="password" name="password" id="password" placeholder="Password" class="sign" required>
+                <input type="password" name="C_password" id="C_password" placeholder="Confim Password" class="sign" required>
+            </div>
+            <div class="row3">
+                <input type="email" name="email" id="email" placeholder="Email" class="sign email" value="<%= typeof email != 'undefined' ? email : '' %>" required>
+                <input type="number" name="phone" id="phone" placeholder="Phone Number" class="sign email" value="<%= typeof phone != 'undefined' ? phone : '' %>" required>
+            </div>
+            <!-- measurment -->
+            <p id="form-title">Measurments</p>
+            <div class="row3">
+                <input type="number" name="height" id="height" placeholder="Height in CM*" class="sign" value="<%= typeof height != 'undefined' ? height : '' %>" required>
+                <input type="number" name="weight" id="weight" placeholder="Weight in KG*" class="sign" value="<%= typeof weight != 'undefined' ? weight : '' %>" required>
+            </div>
+            <!-- goals -->
+            <p id="form-title">Goals</p>
+            <div class="row3">
+                <input type="number" name="g_weight" id="weight" placeholder="Weight in KG*" class="sign" value="<%= typeof g_weight != 'undefined' ? g_weight : '' %>" required>
+                <select name="goal" id="goal" required>
+                    <option value="Fat Loss">Fat Loss</option>
+                    <option value="Weight Loss">Weight Loss</option>
+                    <option value="Weight Gain">Weight Gain</option>
+                    <option value="Muscle Building">Muscle Building</option>
+                    <option value="Height">Height(only for 18-) Try</option>
+                </select>
+            </div>
+            <!-- plans -->
+            <p id="form-title">Plans</p>
+            <div class="row3">
+                <input type="text" name="plan" id="weight" placeholder="Free Plan" class="sign" value="Free" readonly>
+            </div>
+            <p id="form-title">Personal Detail</p>
+            <div class="row3">
+                <input type="text" name="job" id="job" placeholder="Occupation (Student,Business,Teacher etc...)" class="sign" value="<%= typeof job != 'undefined' ? job : '' %>">
+                <select name="job_type" id="goal" required>
+                    <option value="Desk Job">Desk Job</option>
+                    <option value="Studnet">Student</option>
+                    <option value="Outdoor Job">Outdoor Job</option>
+                    <option value="Indoor Job">Indoor Job</option>
+                    <option value="Stand for Sometime">Stand for Sometime</option>
+                </select>
+            </div>
+            <div class="row2">
+                <input type="text" name="disease" placeholder="Any Disease (if not Type na)" value="<%= typeof disease != 'undefined' ? disease : '' %>" class="sign">
+                <input type="number" name="age" placeholder="Age" value="<%= typeof age != 'undefined' ? age : '' %>" class="sign">
+            </div>
+            <p id="form-title">Custom Food(for Diet)</p>
+            <div class="row3">
+                <input type="text" name="fruit" id="fruit" placeholder="Favourite Fruit" class="sign" value="<%= typeof fruit != 'undefined' ? fruit : '' %>" required>
+                <input type="text" name="food" id="food" placeholder="Favourite Food" class="sign" value="<%= typeof food != 'undefined' ? food : '' %>" required>
+            </div>
+            <div class="row3">
+                <input type="text" name="bad_food" placeholder="Allergic Food or You Don't Like Food (Type like Apple,Pea,etc...)" class="sign" required>
+            </div>
+            <p id="form-title">Upload You Present Image(It Will not be Share to Other)</p>
+            <div class="row3">
+                <input name="result" type="file" class="custom-file-input">
+            </div>
+            <button type="submit" id="signup-btn">Sing up</button>
+        </form>
+    </div>
+</div>
+<% include ./partials/footer %>
+
+<style>
+    .custom-file-input::before{
+        color: #000;
+        width: 300px !important;
+    }
+</style>
+
+<script>
+    function date(){
+        const monthNames = ["January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
+        ];
+        var d = new Date();
+        let date = d.getDate();
+        let month = monthNames[d.getMonth()];
+        let year = d.getFullYear();
+        result = date+'-'+month+'-'+year;
+        document.getElementById('date').value = result;
+    }
+    function week(){
+        var w = new Date();
+        let week = w.getDay();
+        document.getElementById('week').value = week;
+    }
+    date();
+    week();
+</script>

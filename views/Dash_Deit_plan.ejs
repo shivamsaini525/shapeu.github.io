@@ -1,0 +1,224 @@
+<% include ./partials/Dash_navBar %>
+<% include ./partials/messages %>
+
+<div class="dash-wraper">
+<div class="side-nav">
+    <ul id="ul">
+        <a href="/dashboard"><li id="li"><i class="fas fa-home"></i> Home</li></a>
+        <a href="/user/diet-plan"><li id="li"class="focus"><i class="fas fa-utensils"></i> Diet Plan</li></a>
+        <!-- <a href="#"><li id="li"><i class="fas fa-chart-pie"></i> Nutration Value</li></a> -->
+        <a href="/user/contact-chat42GeT"><li id="li"><i class="fas fa-comment-dots"></i> Chat</li></a>
+        <!-- <a href="#"><li id="li"><i class="fas fa-running"></i> PT</li></a> -->
+        <a href="#"><li id="li"><i class="fas fa-burn"></i> Burn Caloris</li></a> 
+        <a href="#"><li id="li"><i class="fas fa-cookie-bite"></i>  CheatMeal</li></a> 
+        <a href="#"><li id="li"><i class="fas fa-journal-whills"></i> Dark Knowlege</li></a> 
+        <a href="/user/user-report"><li id="li"><i class="far fa-clipboard"></i> Report</li></a> 
+        <a href="/blogs"><li id="li"><i class="fas fa-blog"></i> Blogs</li></a>
+        <a href="/settings"><li id="li"><i class="fas fa-wrench"></i> Setting</li></a>
+        <a href="/logout"><li id="li"><i class="fas fa-power-off"></i> Logout</li></a> 
+    </ul>
+<!-- <div class="inner-image"></div> -->
+</div>
+<div class="main-container">
+        <% if (diet) {%>
+            <h1 style="text-align: center;margin-top: 50px;">While we are Preparing You Diet Plan you can check our Blogs</h1>
+            <a href="/blogs"><button class="btn-center">Blogs</button></a>
+        <% } %>
+        <table border="2">
+            <tr>
+                <td>Odd Days</td>
+                <td>6-7 AM</td>
+                <td>9-10 AM</td>
+                <td>12-1 PM</td>
+                <td>4-5 PM</td>
+                <td>7-8 PM</td>
+                <td>9-10 PM</td>
+            </tr>
+            <tr>
+                <td>Monday</td>
+                <td>Warm Water with (Zeera or Apple Cide Winager)</td>
+                <td>2 Roti with Any Sabzi</td>
+                <td>1 cup Black Coffee with Almond</td>
+                <td>Oats Meal</td>
+                <td>Soup</td>
+                <td>soup</td>
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td>Warm Water with (Zeera or Apple Cide Winager)</td>
+                <td>2 Roti with Any Sabzi</td>
+                <td>1 cup Black Coffee with Almond</td>
+                <td>Oats Meal</td>
+                <td>Soup</td>
+                <td>soup</td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td>Warm Water with (Zeera or Apple Cide Winager)</td>
+                <td>2 Roti with Any Sabzi</td>
+                <td>1 cup Black Coffee with Almond</td>
+                <td>Oats Meal</td>
+                <td>Soup</td>
+                <td>soup</td>
+            </tr>
+            <tr>
+                <td>Thrusday</td>
+                <td>Warm Water with (Zeera or Apple Cide Winager)</td>
+                <td>2 Roti with Any Sabzi</td>
+                <td>1 cup Black Coffee with Almond</td>
+                <td>Oats Meal</td>
+                <td>Soup</td>
+                <td>soup</td>
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <td>Warm Water with (Zeera or Apple Cide Winager)</td>
+                <td>2 Roti with Any Sabzi</td>
+                <td>1 cup Black Coffee with Almond</td>
+                <td>Oats Meal</td>
+                <td>Soup</td>
+                <td>soup</td>
+            </tr>
+            <tr>
+                <td>Saturday</td>
+                <td>Warm Water with (Zeera or Apple Cide Winager)</td>
+                <td>2 Roti with Any Sabzi</td>
+                <td>1 cup Black Coffee with Almond</td>
+                <td>Oats Meal</td>
+                <td>Soup</td>
+                <td>soup</td>
+            </tr>
+            <tr>
+                <td>Sunday</td>
+                <td>Warm Water with (Zeera or Apple Cide Winager)</td>
+                <td>2 Roti with Any Sabzi</td>
+                <td>1 cup Black Coffee with Almond</td>
+                <td>Oats Meal</td>
+                <td>Soup</td>
+                <td>soup</td>
+            </tr>
+        </table>
+        <table border="2">
+            <tr>
+                <td>Even Days</td>
+                <td>6-7 AM</td>
+                <td>9-10 AM</td>
+                <td>12-1 PM</td>
+                <td>4-5 PM</td>
+                <td>7-8 PM</td>
+                <td>9-10 PM</td>
+            </tr>
+            <tr>
+                <td>Monday</td>
+                <td>Warm Water with (Zeera or Apple Cide Winager)</td>
+                <td>2 Roti with Any Sabzi</td>
+                <td>1 cup Black Coffee with Almond</td>
+                <td>Oats Meal</td>
+                <td>Soup</td>
+                <td>soup</td>
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td>Warm Water with (Zeera or Apple Cide Winager)</td>
+                <td>2 Roti with Any Sabzi</td>
+                <td>1 cup Black Coffee with Almond</td>
+                <td>Oats Meal</td>
+                <td>Soup</td>
+                <td>soup</td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td>Warm Water with (Zeera or Apple Cide Winager)</td>
+                <td>2 Roti with Any Sabzi</td>
+                <td>1 cup Black Coffee with Almond</td>
+                <td>Oats Meal</td>
+                <td>Soup</td>
+                <td>soup</td>
+            </tr>
+            <tr>
+                <td>Thrusday</td>
+                <td>Warm Water with (Zeera or Apple Cide Winager)</td>
+                <td>2 Roti with Any Sabzi</td>
+                <td>1 cup Black Coffee with Almond</td>
+                <td>Oats Meal</td>
+                <td>Soup</td>
+                <td>soup</td>
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <td>Warm Water with (Zeera or Apple Cide Winager)</td>
+                <td>2 Roti with Any Sabzi</td>
+                <td>1 cup Black Coffee with Almond</td>
+                <td>Oats Meal</td>
+                <td>Soup</td>
+                <td>soup</td>
+            </tr>
+            <tr>
+                <td>Saturday</td>
+                <td>Warm Water with (Zeera or Apple Cide Winager)</td>
+                <td>2 Roti with Any Sabzi</td>
+                <td>1 cup Black Coffee with Almond</td>
+                <td>Oats Meal</td>
+                <td>Soup</td>
+                <td>soup</td>
+            </tr>
+            <tr>
+                <td>Sunday</td>
+                <td>Warm Water with (Zeera or Apple Cide Winager)</td>
+                <td>2 Roti with Any Sabzi</td>
+                <td>1 cup Black Coffee with Almond</td>
+                <td>Oats Meal</td>
+                <td>Soup</td>
+                <td>soup</td>
+            </tr>
+        </table>
+   </div>
+</div>
+</div>
+
+
+<style>
+    table{
+        border-collapse: collapse;
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+   
+    table td{
+        padding: 5px 20px;
+    }
+    
+    .alert{
+        left: 19% !important;
+        border-left: 16px solid #e91E63;
+        background: #1b4b63;
+    }
+  
+    #ul{
+    list-style: none;
+    margin-top: 50px;
+    z-index: 9999999;
+    display: block;
+    width: 100%;
+    margin-left: 20px;
+}
+#ul a{
+    text-decoration: none;
+}
+#ul #li{
+    color: aliceblue;
+    margin-top: 3px;
+    padding: 16px 9px;
+    margin-left: -18px;
+    width: 100%;
+    transition: .2s ease-in-out;
+}
+#ul #li:hover{
+    margin-left: -30px;
+    width: 96%;
+    background-color: #1391ff;
+    border: none;
+    border-left: 10px solid #fff;
+    transform: translateX(10px);
+}
+</style>

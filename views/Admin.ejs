@@ -1,0 +1,201 @@
+<% include ./partials/AdminNav %>
+
+<div class="wraper">
+
+<div class="admin-box">
+    <h3 style="margin-left: 10px;margin-bottom: 10px;">Personal Information</h3>
+<H4><%= user.name %></H4>
+<h4><%= user.email %></h4>
+<h4><%= user.date_of_creation%></h4>
+</div>
+
+<div class="admin-info">
+    <h3 style="margin-left: 10px;margin-bottom: 10px;">ShapeYou Information</h3>
+<p>Total Users:<%=total_user%></p>
+<p>Total Emp : <%=total_emp%></p>
+<p>Total Message : <%=total_message%></p>
+</div>
+
+<div class="admin-user">
+    <h3 style="margin-left: 10px;margin-bottom: 10px;">--All Users</h3>
+    <% for(var i = 0; i < all_user.length; i++) {%>
+        S.NO:<%= i %>
+        <img src="/Client_images/<%= all_user[i].image%>" alt="<%= all_user[i].first_name%>" width="200">
+        <p><span><%= all_user[i].first_name %> <%= all_user[i].last_name %></span> </p>
+        <p>Plan Type: <%= all_user[i].plan %> </p>
+        <p>Date of Joing: <%= all_user[i].Date_of_creation %> </p>
+        <p>Email: <%= all_user[i].email%></p>
+        <p>Weight: <%= all_user[i].weight%></p>
+        <p>Height: <%= all_user[i].height%></p>
+        <p>Profession: <%= all_user[i].job%></p>
+        <p>Progress Report: <%= all_user[i].pro_report%></p>
+        <p>Action : <%= all_user[i].action%></p>
+        <p>Goal Weight : <%= all_user[i].g_weight%></p>
+        <p>Goal Plan : <%= all_user[i].goal%></p>
+        <p>Job Type : <%= all_user[i].job_type%></p>
+        <p>Disease : <%= all_user[i].disease%></p>
+        <p>Fav Fruit : <%= all_user[i].fruit%></p>
+        <p>Fav Food : <%= all_user[i].food%></p>
+        <p>Bad Food : <%= all_user[i].bad_food%></p>
+        <% if (all_user[i].diet=true) {%>
+        <p>Diet: Available</p>
+        <% } else {%>
+        <p>Diet : Not Available</p>
+        <% }%>
+        <div style="border-bottom: 1px dotted #FFF; height: 1px; width: 100%;"></div>
+    <%}%>  
+</div>
+
+</div>
+<div class="admin-emp">
+    <h3 style="margin-left: 10px;margin-bottom: 10px;">---All Employee</h3>
+   <% for(var j=0; j < all_emp.length; j++) {%>
+    S.NO:<%= j %>
+    <p style="margin-bottom: 10px;margin-top: 10px;"><span><%= all_emp[j].first_name %> <%= all_emp[j].last_name %></span></p>
+    <p><%= all_emp[j]._id%></p>
+    <p>Joing Date : <%= all_emp[j].date_of_creation%></p>
+    <p>E-mail : <%= all_emp[j].email%></p>
+    <p>Salary Status: <%= all_emp[j].s_status %></p>
+    <p>Specialist: <%= all_emp[j].specialist%> </p>
+    <p>Education: <%= all_emp[j].education%></p>
+    <p>When : <%= all_emp[j].when%></p>
+    <h3 style="margin-left: 10px;margin-bottom: 10px; margin-top: 10px;" >Contact Info</h3>
+    <p>Address : <%= all_emp[j].address%></p>
+    <p>Pin Code : <%= all_emp[j].pin_code%></p>
+    <p>State: : <%= all_emp[j].state%></p>
+    <h3 style="margin-left: 10px;margin-bottom: 10px; margin-top: 10px;" >States</h3>
+    <p>Total Client Holding : <%= all_emp[j].t_client%></p>
+    <p>Leaves : <%= all_emp[j].leaves%></p>
+    <p>Salary: <%= all_emp[j].salary%></p>
+    <div style="border-bottom: 1px dotted #000; height: 1px; width: 100%;"></div>
+   <%}%>
+</div>
+<div class="admin-message">
+
+    <h3 style="margin-left: 10px;margin-bottom: 10px;">---All Contact Request</h3>
+    <% for(var k=0;k < all_msg.length; k++) {%>
+        S.No: <%= k %><br><br>
+        <p>Title: <%= all_msg[k].title%></p>
+        <p>Date: <%= all_msg[k].Date_of_Post%></p>
+        <p>From: <%= all_msg[k].email%></p>
+        <p>Message: <%= all_msg[k].message%></p>
+        <div style="border-bottom: 1px dotted #fff; height: 1px; width: 100%;"></div>
+    <%}%>    
+</div>
+<style>
+    span{
+        font-size: 1.2rem;
+        font-family: 'Rajdhani', sans-serif;
+        font-weight: 800;
+    }
+    h2{
+        padding: 10px auto;
+        background-color: #000;
+        width: 100%;
+        position: static;
+        margin-top: -80px;
+        padding-left: 300px;
+    }
+    img{
+        margin-left: 10px;
+        border: 5px solid #fff;
+        border-radius: 4px;
+    }
+    .wraper{
+        display: flex;
+    }
+    .admin-box{
+        height: 20vh;
+        width: 20%;
+        background-color: cadetblue;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    h4{
+        margin-left: 20px;
+    }
+    .admin-info{
+        height: 20vh;
+        width: 20%;
+        background-color: coral;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .admin-info p{
+        margin-left: 20px;
+    }
+    .admin-user{
+        height: 80vh;
+        width: 60%;
+        background-color: rgb(73, 152, 226);
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: flex-start;
+        overflow-y: scroll;
+        padding-top: 500px;
+        padding-bottom: 20px;
+    }
+    .admin-user p{
+        margin-left: 10px;
+        margin-top:10px ;
+    }
+    .admin-emp{
+        position: absolute;
+        top: 35vh;
+        height: 60vh;
+        width: 40%;
+        background-color: rgb(247, 198, 39);
+        color: rgb(0, 0, 0);
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: flex-start;
+        overflow-y: scroll;
+        padding-top: 250px;
+        padding-bottom: 20px;
+    }
+    .admin-emp p{
+        margin-left : 10px
+    }
+    .admin-message{
+        /* position: absolute;
+        top: 35vh; */
+        height: 40vh;
+        width: 100%;
+        background-color: rgb(236, 72, 60);
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: flex-start;
+        overflow-y: scroll;
+        position: absolute;
+        width: 40%;
+        top: 135%;
+    }
+</style>
+
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+    
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+    </script>
